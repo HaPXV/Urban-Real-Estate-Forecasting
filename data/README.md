@@ -41,4 +41,4 @@ All public files are monthly aggregated and anonymized. No personally identifiab
   - Dataset C macro fields (interest rate, gold price, VN-Index)
 
 ## Withheld Data
-Raw source data for Dataset A and Dataset B are not publicly distributed in this repository because they may contain sensitive information in non-aggregated form.
+Raw source data for Dataset A and Dataset B are not publicly distributed in this repository because they contain sensitive or otherwise non-public information in non-aggregated form.

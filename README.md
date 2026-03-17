@@ -13,7 +13,7 @@ This repository is a **reviewer-facing ICCE 2026 artifact**. It is intentionally
   - **Dataset C:** monthly macroeconomic indicators.
 - **Privacy:** raw Dataset A and Dataset B records are **not public** due to sensitive source information.
 - **Public sanitized files:** all reviewer-available data are under `data/public/`.
-- **Paper artifact outputs:** figures and result tables are available under `results/` and the paper PDF is under `paper_assets/`.
+- **Paper artifact outputs:** paper figures and tables are available under `results/` and the paper PDF is under `paper_assets/`.
 
 ## Public Data Files (Sanitized)
 - `data/public/dataset_a_monthly_public.csv`
@@ -30,7 +30,7 @@ No personally identifiable information (PII) is included in these public artifac
 - Table 2 artifact: `results/tables/table2_model_performance.csv`
 - Supporting table (Prophet summary): `results/tables/paper_prophet_summary.csv`
 - Supporting data for Figure 3: `results/tables/figure3_prophet_forecast_data.csv`
-- Multi-source layout template (not a finalized benchmark table): `results/tables/table3_multisource_template.csv`
+- Multi-source layout template (supporting artifact; not a finalized benchmark table): `results/tables/table3_multisource_template.csv`
 
 ## How to Verify This Repository
 1. Confirm the paper file exists:
