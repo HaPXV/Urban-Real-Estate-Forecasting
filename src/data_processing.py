@@ -51,7 +51,7 @@ def _prepare_monthly_frame(
 
 
 def _load_public_csv(filename: str, data_dir: Path = DEFAULT_PUBLIC_DATA_DIR) -> pd.DataFrame:
-    csv_path = data_dir / filename
+    csv_path = Path(data_dir) / filename
     if not csv_path.exists():
         raise FileNotFoundError(f"Could not find dataset file: {csv_path}")
     return pd.read_csv(csv_path)
