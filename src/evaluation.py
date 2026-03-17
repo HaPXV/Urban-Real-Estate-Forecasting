@@ -46,6 +46,7 @@ def build_model_comparison_table(
 
     table = pd.DataFrame(rows, columns=["Model", "MAE", "RMSE", "MAPE"])
     if output_path is not None:
+        output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         table.to_csv(output_path, index=False)
     return table
@@ -73,6 +74,7 @@ def build_robustness_table(
 
     table = pd.DataFrame(rows, columns=["Split", "Model", "MAE", "RMSE", "MAPE"])
     if output_path is not None:
+        output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         table.to_csv(output_path, index=False)
     return table
@@ -91,6 +93,7 @@ def build_baseline_comparison_table(
 
     table = pd.DataFrame(rows, columns=["Model", "MAE", "RMSE", "MAPE"])
     if output_path is not None:
+        output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         table.to_csv(output_path, index=False)
     return table

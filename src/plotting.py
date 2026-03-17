@@ -14,6 +14,7 @@ def plot_price_timeseries(
     output_path: Path = Path("results/figures/figure2_price_timeseries.png"),
 ) -> Path:
     """Recreate Figure 2 with Dataset A monthly average price series."""
+    output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fig, ax = plt.subplots(figsize=(9, 4.5))
     ax.plot(price_series.index, price_series.values, color="#1f77b4", linewidth=2)
@@ -41,6 +42,7 @@ def plot_actual_vs_predicted(
 
     data = forecast_df.copy()
     data["date"] = pd.to_datetime(data["date"])
+    output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=(9, 4.5))
@@ -80,6 +82,7 @@ def plot_robustness_mape(
         raise ValueError(f"Missing required columns for robustness plot: {sorted(missing)}")
 
     pivot = robustness_table.pivot(index="Split", columns="Model", values="MAPE")
+    output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=(9, 4.5))
@@ -107,6 +110,7 @@ def plot_baseline_comparison(
         raise ValueError(f"Missing required columns for baseline comparison plot: {sorted(missing)}")
 
     metrics_df = baseline_table.set_index("Model")[["MAE", "RMSE", "MAPE"]]
+    output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     fig, ax = plt.subplots(figsize=(9, 4.5))
