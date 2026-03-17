@@ -1,0 +1,2 @@
+Model,MAE,RMSE,MAPE,Train Months,Test Months,Total Months
+Prophet,6494116.2415,9017129.8151,6.46,37,10,47
