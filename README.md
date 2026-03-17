@@ -1,84 +1,59 @@
-# ICCE 2026 Research Artifact
+# ICCE 2026 Paper Artifact Repository
 
-## Title
+## Paper
 **A Multi-Source Framework for Forecasting Urban Real Estate Trends in Ho Chi Minh City**
 
-This repository is a **concise, reviewer-friendly paper artifact** prepared for ICCE 2026 evaluation.
-It is intentionally minimal and focused on reproducibility signals rather than full thesis-scale content.
+This repository is a **reviewer-facing ICCE 2026 artifact**. It is intentionally compact and focused on the paper outputs, not a full thesis codebase.
 
 ## 60-Second Reviewer Overview
-- **What this is:** a compact ICCE 2026 artifact for reproducing core forecasting outputs, not a full thesis repository.
-- **Forecasting setup:** monthly prediction with **47 observations** and primary split of **37 train / 10 test**.
-- **Data design:** three aligned monthly datasets (transactions, macro context, and online market sentiment/activity).
-- **Privacy policy:** only anonymized monthly aggregates are public; sensitive raw records remain withheld.
-- **Where reproduced outputs appear:** charts in `results/figures/` and tables in `results/tables/`.
+- **Forecasting setup:** monthly forecasting with **47 observations** using a primary **37/10 train-test split**.
+- **Data design:** three monthly sources used in the paper:
+  - **Dataset A:** monthly aggregated real-estate transaction series.
+  - **Dataset B:** monthly aggregated land-registration activity counts.
+  - **Dataset C:** monthly macroeconomic indicators.
+- **Privacy:** raw Dataset A and Dataset B records are **not public** due to sensitive source information.
+- **Public sanitized files:** all reviewer-available data are under `data/public/`.
+- **Paper artifact outputs:** figures and result tables are available under `results/` and the paper PDF is under `paper_assets/`.
 
-## Scope
-The artifact provides:
-- Lightweight project structure for data, code, configs, and outputs.
-- Placeholder modules for processing, forecasting, evaluation, baselines, and plotting.
-- Starter documentation describing protocol, provenance, and limitations.
+## Public Data Files (Sanitized)
+- `data/public/dataset_a_monthly_public.csv`
+- `data/public/dataset_b_monthly_public.csv`
+- `data/public/dataset_c_macro_public.csv`
+- `data/public/unified_monthly_panel_public.csv`
 
-The artifact does **not** include a full end-to-end thesis repository.
+No personally identifiable information (PII) is included in these public artifacts.
 
-## Datasets (Three-Source Design)
-The study aligns three monthly data sources:
+## Paper Artifact Outputs
+- Paper PDF: `paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf`
+- Figure 2 artifact: `results/figures/figure2_price_timeseries.png`
+- Figure 3 artifact: `results/figures/figure3_actual_vs_predicted.png`
+- Table 2 artifact: `results/tables/table2_model_performance.csv`
+- Supporting table (Prophet summary): `results/tables/paper_prophet_summary.csv`
+- Supporting data for Figure 3: `results/tables/figure3_prophet_forecast_data.csv`
+- Multi-source layout template (not a finalized benchmark table): `results/tables/table3_multisource_template.csv`
 
-1. **Dataset A — Urban housing transactions (core target source).**
-   - Purpose: supply historical housing market dynamics for forecasting.
-   - Access: sensitive row-level records are **withheld for privacy**.
-
-2. **Dataset B — Socioeconomic and macro indicators (context source).**
-   - Purpose: capture broader drivers linked to real-estate movement.
-   - Access: sensitive or licensed granular records are **withheld for privacy/licensing**.
-
-3. **Dataset C — Online market activity/sentiment indicators (auxiliary source).**
-   - Purpose: provide high-level behavioral signals that complement A/B.
-   - Access: only non-identifying, monthly aggregated representations are exposed.
-
-### Public vs. Withheld
-- **Public:** anonymized monthly aggregated data placed under `data/public/`.
-- **Withheld:** raw, row-level or identifying source data for Datasets A/B (and any sensitive intermediate joins).
-- Supporting schema/provenance notes belong in `data/schema/` and `docs/`.
-
-## Core Forecasting Protocol
-- Time granularity: monthly.
-- Total observations in the main setup: **47**.
-- Primary evaluation split: **37 training / 10 testing**.
-- Configs and model templates are in `configs/` and `src/` for reproducible execution.
-
-## Reproduced Artifact Locations
-- Figures: `results/figures/`
-- Tables: `results/tables/`
-
-## Repository Layout
-```text
-.
-├── AGENTS.md
-├── CITATION.cff
-├── LICENSE
-├── README.md
-├── requirements.txt
-├── configs/
-├── data/
-│   ├── public/
-│   └── schema/
-├── docs/
-├── notebooks/
-├── paper_assets/
-├── results/
-└── src/
-```
-
-## Quick Start
-1. Create a Python environment.
-2. Install dependencies:
+## How to Verify This Repository
+1. Confirm the paper file exists:
    ```bash
-   pip install -r requirements.txt
+   test -f paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf
    ```
-3. Add public-ready aggregates to `data/public/`.
-4. Configure model settings in `configs/`.
-5. Implement and run pipelines from `src/`.
+2. Confirm reproduced figures/tables exist:
+   ```bash
+   test -f results/figures/figure2_price_timeseries.png
+   test -f results/figures/figure3_actual_vs_predicted.png
+   test -f results/tables/table2_model_performance.csv
+   ```
+3. Confirm public sanitized datasets exist:
+   ```bash
+   test -f data/public/dataset_a_monthly_public.csv
+   test -f data/public/dataset_b_monthly_public.csv
+   test -f data/public/dataset_c_macro_public.csv
+   test -f data/public/unified_monthly_panel_public.csv
+   ```
+4. Optionally inspect a few rows:
+   ```bash
+   head -n 5 data/public/unified_monthly_panel_public.csv
+   ```
 
-## Intended Review Use
-Reviewers can inspect structure, documentation placeholders, and configuration templates to assess artifact readiness and reproducibility planning.
+## Scope Note
+This artifact is intentionally minimal for paper review and reproducibility checks. It does not claim to release sensitive raw data or full thesis-scale experimentation assets.
