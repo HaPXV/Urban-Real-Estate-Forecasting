@@ -24,6 +24,7 @@ No personally identifiable information (PII) is included in these public artifac
 
 ## Paper Artifacts in This Repository
 - **Paper PDF:** `paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf`
+- **Figure 1:** `results/figures/figure1_framework.png`
 - **Figure 2:** `results/figures/figure2_price_timeseries.png`
 - **Figure 3:** `results/figures/figure3_actual_vs_predicted.png`
 - **Table II:** `results/tables/table2_model_performance.csv`
@@ -50,6 +51,7 @@ No personally identifiable information (PII) is included in these public artifac
    ```
 3. Confirm main paper figure/table artifacts are present:
    ```bash
+   test -f results/figures/figure1_framework.png
    test -f results/figures/figure2_price_timeseries.png
    test -f results/figures/figure3_actual_vs_predicted.png
    test -f results/tables/table2_model_performance.csv

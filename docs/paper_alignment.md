@@ -36,6 +36,7 @@ The main forecasting setup reported in the paper is represented by this artifact
 
 ### A) Final reproduced result artifacts (main paper outputs)
 - **Paper PDF** -> `paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf`
+- **Figure 1 (framework/pipeline overview)** -> `results/figures/figure1_framework.png`
 - **Figure 2** -> `results/figures/figure2_price_timeseries.png`
 - **Figure 3** -> `results/figures/figure3_actual_vs_predicted.png`
 - **Table II** -> `results/tables/table2_model_performance.csv`
