@@ -3,19 +3,18 @@
 ## Paper
 **A Multi-Source Framework for Forecasting Urban Real Estate Trends in Ho Chi Minh City**
 
-This repository is a **reviewer-facing ICCE 2026 artifact**. It is intentionally compact and focused on the paper outputs, not a full thesis codebase.
+This repository is a concise, reviewer-facing artifact package for ICCE 2026. It is designed for fast verification of paper-aligned datasets and outputs, not as a full thesis repository.
 
 ## 60-Second Reviewer Overview
-- **Forecasting setup:** monthly forecasting with **47 observations** using a primary **37/10 train-test split**.
-- **Data design:** three monthly sources used in the paper:
+- **Forecasting setup in paper:** 47 monthly observations with a primary **37/10 train-test split**.
+- **Three data sources used in the framework:**
   - **Dataset A:** monthly aggregated real-estate transaction series.
   - **Dataset B:** monthly aggregated land-registration activity counts.
   - **Dataset C:** monthly macroeconomic indicators.
-- **Privacy:** raw Dataset A and Dataset B records are **not public** due to sensitive source information.
-- **Public sanitized files:** all reviewer-available data are under `data/public/`.
-- **Paper artifact outputs:** paper figures and tables are available under `results/` and the paper PDF is under `paper_assets/`.
+- **Privacy constraint:** raw Dataset A and Dataset B are not public because source-level records are sensitive/non-public.
+- **Public sanitized data release:** all reviewer-accessible datasets are under `data/public/`.
 
-## Public Data Files (Sanitized)
+## Public Sanitized Data Files
 - `data/public/dataset_a_monthly_public.csv`
 - `data/public/dataset_b_monthly_public.csv`
 - `data/public/dataset_c_macro_public.csv`
@@ -23,37 +22,45 @@ This repository is a **reviewer-facing ICCE 2026 artifact**. It is intentionally
 
 No personally identifiable information (PII) is included in these public artifacts.
 
-## Paper Artifact Outputs
-- Paper PDF: `paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf`
-- Figure 2 artifact: `results/figures/figure2_price_timeseries.png`
-- Figure 3 artifact: `results/figures/figure3_actual_vs_predicted.png`
-- Table 2 artifact: `results/tables/table2_model_performance.csv`
-- Supporting table (Prophet summary): `results/tables/paper_prophet_summary.csv`
-- Supporting data for Figure 3: `results/tables/figure3_prophet_forecast_data.csv`
-- Multi-source layout template (supporting artifact; not a finalized benchmark table): `results/tables/table3_multisource_template.csv`
+## Paper Artifacts in This Repository
+- **Paper PDF:** `paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf`
+- **Figure 2:** `results/figures/figure2_price_timeseries.png`
+- **Figure 3:** `results/figures/figure3_actual_vs_predicted.png`
+- **Table II:** `results/tables/table2_model_performance.csv`
+- **Table III:** `results/tables/table3_robustness_evaluation_across_different_train_test_splits.csv`
+- **Table IV:** `results/tables/table4_comparison_with_simple_forecasting_baselines.csv`
+- **Supporting Prophet artifacts:**
+  - `results/tables/paper_prophet_summary.csv`
+  - `results/tables/figure3_prophet_forecast_data.csv`
+- **Supporting experiment figures:**
+  - `results/figures/fig_exp1_split_robustness_mape.png`
+  - `results/figures/fig_exp2_baseline_comparison.png`
 
 ## How to Verify This Repository
-1. Confirm the paper file exists:
+1. Confirm the ICCE 2026 paper PDF is present:
    ```bash
    test -f paper_assets/ICCE2026_PhamVinhHa_RealEstateForecasting.pdf
    ```
-2. Confirm reproduced figures/tables exist:
-   ```bash
-   test -f results/figures/figure2_price_timeseries.png
-   test -f results/figures/figure3_actual_vs_predicted.png
-   test -f results/tables/table2_model_performance.csv
-   ```
-3. Confirm public sanitized datasets exist:
+2. Confirm public sanitized datasets are present:
    ```bash
    test -f data/public/dataset_a_monthly_public.csv
    test -f data/public/dataset_b_monthly_public.csv
    test -f data/public/dataset_c_macro_public.csv
    test -f data/public/unified_monthly_panel_public.csv
    ```
-4. Optionally inspect a few rows:
+3. Confirm main paper figure/table artifacts are present:
    ```bash
-   head -n 5 data/public/unified_monthly_panel_public.csv
+   test -f results/figures/figure2_price_timeseries.png
+   test -f results/figures/figure3_actual_vs_predicted.png
+   test -f results/tables/table2_model_performance.csv
+   test -f results/tables/table3_robustness_evaluation_across_different_train_test_splits.csv
+   test -f results/tables/table4_comparison_with_simple_forecasting_baselines.csv
+   ```
+4. Optionally inspect file headers for quick sanity checks:
+   ```bash
+   head -n 2 data/public/dataset_a_monthly_public.csv
+   head -n 2 data/public/unified_monthly_panel_public.csv
    ```
 
 ## Scope Note
-This artifact is intentionally minimal for paper review and reproducibility checks. It does not claim to release sensitive raw data or full thesis-scale experimentation assets.
+This artifact repository is intentionally minimal and paper-aligned for reviewer reproducibility checks.
