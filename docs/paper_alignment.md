@@ -19,7 +19,7 @@ The paper uses three monthly data sources. In this repository, they are represen
 - **Unified monthly analysis panel used for aligned modeling inputs:**
   - `data/public/unified_monthly_panel_public.csv`
 
-Raw source-level records for Dataset A and Dataset B are not included in this artifact repository due to sensitivity/privacy constraints.
+Raw source-level records for Dataset A and Dataset B are not included in this artifact repository due to privacy and non-public data constraints.
 
 ## Forecasting Protocol Alignment
 The primary forecasting setup documented in the paper is reflected as:
@@ -47,7 +47,7 @@ A compact summary matching this setup is provided in:
 - **Multi-source result template:**
   - `results/tables/table3_multisource_template.csv`
 
-`table3_multisource_template.csv` should be interpreted as a template/supporting layout file rather than a finalized benchmark table.
+`table3_multisource_template.csv` should be interpreted as a template/supporting artifact (layout scaffold) rather than a finalized benchmark table.
 
 ## Consistency and Limits
 This repository is intentionally concise for artifact review. It should be read as a paper artifact package, not a full thesis repository or complete raw-data release.
