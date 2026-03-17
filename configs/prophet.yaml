@@ -1,0 +1,8 @@
+model: prophet
+params:
+  yearly_seasonality: true
+  weekly_seasonality: false
+  daily_seasonality: false
+training:
+  train_start: "YYYY-MM"
+  train_end: "YYYY-MM"

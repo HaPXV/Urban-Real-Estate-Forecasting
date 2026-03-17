@@ -1,0 +1,7 @@
+model: arima
+params:
+  order: [1, 1, 1]
+  seasonal_order: [0, 0, 0, 0]
+training:
+  train_start: "YYYY-MM"
+  train_end: "YYYY-MM"
