@@ -8,10 +8,11 @@ It is intentionally scoped for reviewer verification, not as a full research/the
 
 ## What is included
 - Public sanitized monthly datasets under `data/public/`.
-- Final paper-aligned artifacts for Figure 2, Figure 3, Table II, Table III, and Table IV.
+- Final paper-aligned artifacts for Figure 1, Figure 2, Figure 3, Table II, Table III, and Table IV.
 - Supporting outputs used to trace Prophet and experiment context.
 
 ## Main artifact mapping
+- Figure 1 (framework/pipeline overview): `results/figures/figure1_framework.png`
 - Figure 2: `results/figures/figure2_price_timeseries.png`
 - Figure 3: `results/figures/figure3_actual_vs_predicted.png`
 - Table II: `results/tables/table2_model_performance.csv`
