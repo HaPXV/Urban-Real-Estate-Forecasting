@@ -1,0 +1,11 @@
+model: lstm
+params:
+  # Single LSTM layer with 32 hidden units + dense output layer (paper Section V.A)
+  sequence_length: 6
+  hidden_size: 32
+  num_layers: 1
+  dropout: 0.0
+training:
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.001
