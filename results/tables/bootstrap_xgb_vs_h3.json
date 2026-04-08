@@ -1,0 +1,36 @@
+{
+  "valid": true,
+  "alignment": {
+    "n_test": 1658,
+    "xgb_model_ok": true,
+    "h3_model_ok": true,
+    "actuals_match": true
+  },
+  "observed": {
+    "mape_xgb_pct": 16.5465,
+    "mape_h3_pct": 18.3001,
+    "mape_gap_pp": 1.7537,
+    "mae_xgb_M": 18.0665,
+    "mae_h3_M": 19.9662,
+    "mae_gap_M": 1.8997
+  },
+  "bootstrap": {
+    "n_replicates": 5000,
+    "seed": 42,
+    "mape_gap_boot_mean_pp": 1.7553,
+    "mape_gap_ci_lo_pp": 1.1046,
+    "mape_gap_ci_hi_pp": 2.453,
+    "mape_p_one_sided": 0.0,
+    "mape_ci_entirely_positive": true,
+    "mae_gap_boot_mean_M": 1.8986,
+    "mae_gap_ci_lo_M": 1.2003,
+    "mae_gap_ci_hi_M": 2.6413,
+    "mae_p_one_sided": 0.0,
+    "mae_ci_entirely_positive": true
+  },
+  "reference_locked": {
+    "xgb_mape_ref": 16.5465,
+    "h3_mape_ref": 18.2659,
+    "gap_ref": 1.7194
+  }
+}

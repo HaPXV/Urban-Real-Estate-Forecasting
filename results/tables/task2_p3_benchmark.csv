@@ -1,0 +1,7 @@
+model,split,target,RMSE,MAE,MAPE,R2
+GlobalMean,P3,price_m2,45.2251,34.5109,33.7174,-0.1717
+LinearRegression,P3,price_m2,27.1319,19.9206,18.5164,0.5783
+RandomForest,P3,price_m2,26.0131,18.3729,16.7682,0.6123
+XGBoost,P3,price_m2,25.0825,18.0665,16.5465,0.6396
+LightGBM,P3,price_m2,25.5349,18.4464,17.0805,0.6265
+CatBoost,P3,price_m2,25.115,18.128,16.7102,0.6387

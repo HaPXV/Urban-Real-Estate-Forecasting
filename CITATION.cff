@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-title: "A Multi-Source Framework for Forecasting Urban Real Estate Trends in Ho Chi Minh City"
+title: "A Dual-Task Framework for Real Estate Intelligence: Market Forecasting and Property Valuation in Ho Chi Minh City"
 message: "If you use this artifact, please cite it as below."
 type: software
 authors:
-  - family-names: "Nguyen"
-    given-names: "Research Team"
-repository-code: "https://github.com/example/Urban-Real-Estate-Forecasting"
+  - family-names: "Ha"
+    given-names: "Pham Vinh"
+repository-code: "https://github.com/HaPXV/Urban-Real-Estate-Forecasting"
 license: "MIT"
-version: "0.1.0"
-date-released: "2026-01-01"
+version: "1.0.0"
+date-released: "2026-04-08"

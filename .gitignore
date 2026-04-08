@@ -1,3 +1,83 @@
+# Python
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
 .venv/
+venv/
+env/
+ENV/
+conda-env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+
+# Data — private/large files never to be committed
+*.parquet
+*_trimmed*.csv
+*_raw*.csv
+catboost_info/
+
+# Model binaries
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.model
+*.cbm
+
+# Logs and temp outputs
+*.log
+*.tmp
+logs/
+temp/
+tmp/
+
+# Large shapefile data (download from GADM/OSM directly)
+gadm41_VNM_shp/
+vietnam-*.shp/
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+
+# Cache directories
+cache/
+.cache/
+
+# Streamlit
+streamlit_app/
+
+# Local analysis scratch space
+09_r2_revision/
+04_hedonic_branch/
+analysis/
+00_raw/
+02_analytic/
+03_b0_spatial_check/
+06_phase_c_rewrite/
+07_full_manuscript_draft/
+07_reference_exports/
+11_spatial_outputs_final/
